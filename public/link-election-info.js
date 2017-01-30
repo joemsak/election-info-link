@@ -5,10 +5,10 @@
   linkElectionInfo();
 
   var BING_MAPS_KEY = "AusoQe0fW-ZhtN1stnl6fFlxLoyhItjtHiTfhYanMYRCZhgUKabmmawuazS9kBEB",
-      BING_MAP_BASE_URL = "http://dev.virtualearth.net/REST/v1/Locations/",
-      STATES_URL = "https://gist.githubusercontent.com/joemsak/b94a3a5b2de9ef90d2cb795bd95ce051/raw/8b0dbb93521f5d6889502305335104218454c2bf/states_hash.json",
-      SENATE_ELECTION_BASE_URL = "https://en.wikipedia.org/wiki/United_States_Senate_election_in_",
-      HOUSE_ELECTION_BASE_URL = "https://en.wikipedia.org/wiki/United_States_House_of_Representatives_elections,_2018#";
+      BING_MAP_BASE_URL = "//dev.virtualearth.net/REST/v1/Locations/",
+      STATES_URL = "//gist.githubusercontent.com/joemsak/b94a3a5b2de9ef90d2cb795bd95ce051/raw/8b0dbb93521f5d6889502305335104218454c2bf/states_hash.json",
+      SENATE_ELECTION_BASE_URL = "//en.wikipedia.org/wiki/United_States_Senate_election_in_",
+      HOUSE_ELECTION_BASE_URL = "//en.wikipedia.org/wiki/United_States_House_of_Representatives_elections,_2018#";
 
   function linkElectionInfo() {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -45,7 +45,7 @@
   }
 
   function replaceGenericLink(wrapperId, url, text) {
-    var checkUrlExistsUrl = "https://sheltered-escarpment-31930.herokuapp.com/response/?url=" + url;
+    var checkUrlExistsUrl = "//sheltered-escarpment-31930.herokuapp.com/response/?url=" + url;
 
     $.get(checkUrlExistsUrl, function(data) {
       if (data.status !== "404") {
